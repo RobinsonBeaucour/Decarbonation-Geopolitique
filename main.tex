@@ -1,0 +1,210 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{eso-pic}
+\usepackage[pages=some]{background}
+\usepackage[french]{babel}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fancybox}
+% \usepackage{natbib}
+\usepackage{wrapfig}
+\geometry{a4paper,left=25mm,right=25mm,top=25mm}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\setlength{\parindent}{0pt}
+\usepackage[
+backend=biber,
+style=authoryear,
+]{biblatex}
+% \usepackage[notes,backend=biber,style=authordate]{biblatex-chicago}
+\usepackage{dblfloatfix}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{tocbasic}
+
+\addbibresource{Bibliographie/sources CREDEN.bib}
+\AtEveryBibitem{\clearfield{urldate}}
+\AtEveryBibitem{\clearfield{langid}}
+\AtEveryBibitem{
+    \clearfield{urlyear}
+    \clearfield{urlmonth}
+}
+% \AtEveryBibitem{\clearfield{url}}
+
+\title{\centering\huge Projet CREDEN \\~\\ \Large La décarbonation du mix énergétique va-t-elle supprimer les risques géopolitiques ?}
+\author{
+  CODET, Marie\\
+%   \texttt{first1.last1@xxxxx.com}
+  \and
+  BEAUCOUR, Robinson\\
+%   \texttt{first2.last2@xxxxx.com}
+}
+\date{\today}
+
+\begin{document}
+% \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{BG_electricity.jpg}}
+
+\maketitle
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Images/Intro/PNG-OSE-LOGO-FINAL-1.png}
+\end{center}
+
+\begin{abstract}
+    La décarbonation du mix énergétique mondial implique des changements majeurs dans les flux physiques mondiaux. Dans un scénario de décarbonation, les flux en combustibles fossiles vont se tarir pour laisser place à une multitude de flux en minéraux. Cette étude propose d'évaluer si les risques géopolitiques d'un mix décarboné seront maîtrisables. Après avoir évalué les risques géopolitiques des ressources en énergies renouvelables, cette étude discute des risques d'approvisionnement de cinq métaux critiques essentiels à la décarbonation : le cuivre, le nickel, le lithium, le cobalt, les terres rares. La suite de la chaîne de valeur est évaluée pour plusieurs technologies bas-carbone : éolien, photovoltaïque, véhicule électrique et réseaux électriques. Une veille sur les politiques publiques sur les métaux critiques est réalisée pour mettre en relief les risques précédents avec les actions qui peuvent avoir été prises par les Etats. Finalement, cette étude discute séparément des risques et des opportunités du nucléaire et de l'hydrogène bas-carbone sur le plan géopolitique.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+% \setcounter{section}{-1}
+
+\newpage
+\begin{refsection}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+\input{00 - Introduction/Intro_Intro.tex}
+\vfill
+\printbibliography
+\clearpage
+\end{refsection}
+
+% 1
+\begin{refsection}
+\section{Des risques géopolitiques pour les renouvelables?}
+\addxcontentsline{myelements}{subsection}{My Custom Element}
+
+    \input{01 - Nouveaux risques ENR/00 - Intro.tex}
+    \subsection{Les renouvelables comme arme géopolitique}
+    \label{section:arme}
+    \input{01 - Nouveaux risques ENR/01 - Arme geopo.tex}
+    \subsection{Malédiction des ressources}
+    \label{section:malédiction}
+    \input{01 - Nouveaux risques ENR/02 - malédiction.tex}
+    \subsection{Vulnérabilité au risque cyber}
+    \label{section:cyber}
+    \input{01 - Nouveaux risques ENR/03 - risque cyber.tex}
+    \subsection{Vers une nouvelle grille d'analyse ?}
+    \label{section:analyse}
+    \input{01 - Nouveaux risques ENR/04 - grille d'analyse.tex}
+    \clearpage
+    \printbibliography
+    \clearpage
+\end{refsection}
+% 2
+\section{Approvisionnement en métaux}
+\label{section:approvisionnement}
+    \input{02 - Approvisionnement en métal/00 - Intro.tex}
+    \subsection{Définition de la criticité}
+    \input{02 - Approvisionnement en métal/01 - définition criticité.tex}
+    \label{section:criticité}
+\clearpage
+\subsection{Fiches métaux}
+\label{section:fiches}
+\input{02 - Approvisionnement en métal/02 - fiches métaux/_fiches_metaux.tex}
+\clearpage
+\begin{center}
+\subsubsection*{Cuivre}
+\addcontentsline{toc}{subsubsection}{Cuivre}
+\end{center}
+\input{02 - Approvisionnement en métal/02 - fiches métaux/cuivre.tex}
+\begin{center}
+\subsubsection*{Nickel}
+\addcontentsline{toc}{subsubsection}{Nickel}
+\end{center}
+\input{02 - Approvisionnement en métal/02 - fiches métaux/nickel.tex}
+\begin{center}
+\subsubsection*{Lithium}
+\addcontentsline{toc}{subsubsection}{Lithium}
+\end{center}
+\input{02 - Approvisionnement en métal/02 - fiches métaux/lithium.tex}
+\begin{center}
+\subsubsection*{Cobalt}
+\addcontentsline{toc}{subsubsection}{Cobalt}
+\end{center}
+\input{02 - Approvisionnement en métal/02 - fiches métaux/cobalt.tex}
+\begin{center}
+\subsubsection*{Terres Rares}
+\addcontentsline{toc}{subsubsection}{Terres Rares}
+\end{center}
+\input{02 - Approvisionnement en métal/02 - fiches métaux/terres_rares.tex}
+\clearpage
+\subsection{Comparaison avec le pétrole}
+\label{section:comparaison}
+\input{02 - Approvisionnement en métal/03 - Comparaison géopo hydrocarbures.tex}
+\clearpage
+\subsection{Etapes de la chaîne d'approvisionnement}
+\label{section:chaine}
+\input{02 - Approvisionnement en métal/04 - Chaîne de valeur des métaux.tex}
+\clearpage
+\printbibliography
+\clearpage
+% 3
+\clearpage
+\begin{refsection}
+\section{Maîtrise technologique et industrielle}
+    \input{03 - Maitrise technologique et industrielle/00_intro.tex}
+    \newpage
+    \subsection{Etat des lieux de l'industrie des technologies bas-carbone}
+    \label{section:etat_des_lieux}
+    \input{03 - Maitrise technologique et industrielle/01_Etat des lieux l'industrie bas-carbone.tex}
+    \subsection{Temporalités des chaînes d'approvisionnement}
+    \label{section:temporalité}
+    \input{03 - Maitrise technologique et industrielle/02_Temporalités des chaines d'approvisionnement.tex}
+    \subsection{Leviers de sécurisation et résilience}
+    \label{section:levier}
+    \input{03 - Maitrise technologique et industrielle/03_Leviers de résilience.tex}
+    \clearpage
+    \clearpage
+    \printbibliography
+    \clearpage
+\end{refsection}
+% 4
+\newpage
+\begin{refsection}
+\section{Politiques publiques sur les chaînes d'approvisionnement}
+\label{section:politiques_publiques}
+\input{04 - Politiques/00_intro.tex}
+\subsection{Analyse de risque}
+\label{section:analyse_risque}
+\input{04 - Politiques/01_Analyse de risque.tex}
+\subsection{Fiabilité des approvisionnements}
+\label{section:fiabilite_appro}
+\input{04 - Politiques/02_Fiabilité des approvisionnement.tex}
+\subsection{Maîtrise technologique et industrielle}
+\label{section:maitrise_techno}
+\input{04 - Politiques/03_Maitrise industrielle et technologique.tex}
+\subsection{Durabilité des approvisionnements}
+\label{section:durabilite_appro}
+\input{04 - Politiques/04_Durabilité des approvisionnements.tex}
+\clearpage
+\clearpage
+\printbibliography
+\clearpage
+\end{refsection}
+% 5
+\newpage
+\begin{refsection}
+\section{Nucléaire}
+\label{section:nucleaire}
+\input{05 - Nucléaire/nucleaire.tex}
+\newpage
+\section{Hydrogène}
+\label{section:hydrogene}
+\input{06 - Hydrogène/hydrogene.tex}
+\clearpage
+\printbibliography
+\end{refsection}
+\clearpage
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+\input{07 - Conclusion.tex}
+\end{document}
+
